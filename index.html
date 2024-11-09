@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>LuisCom06's (Isdea) Webpage</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/LuisWEB/css/style.css">
+<link rel="stylesheet" href="/LuisWEB/css/Trebuchet-MS.tff">
+<link rel="stylesheet" href="css/fontawesome.css">
+<link rel="stylesheet" href="css/svg-with-js.css">
+<link rel="stylesheet" href="css/brands.css">
+<script type=text/javascript src=js/all.js></script>
+<script type=text/javascript src=js/brands.js></script>
+<style>
+html,body,h1,h2,h3,h4 {font-family:"Trebuchet MS", sans-serif}
+.mySlides {display:none}
+.w3-tag, .fa {cursor:pointer}
+.w3-tag {height:15px;width:15px;padding:0;margin-top:6px}
+</style>
+</head>
+<body bgcolor="#1f1f1f" text="#FFFFFF" link="#F7E333" vlink="#8E7302" alink="#F7E333" bgproperties="fill">
+
+<div class="w3-center">
+    <img src="aac.png" style="width:100%">
+    <a href="LuisWEB/index.html" target="_parent" title="Enter">
+      Enter
+    </a>
+  </div>
+
+
+<script>
+// Slideshow
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demodots");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length} ;
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" w3-white", "");
+  }
+  x[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " w3-white";
+}
+</script>
+
+</body>
+</html>
